@@ -21,8 +21,7 @@ az login
 ```
 **Bash-Compatible Shell (for Line Continuation)**
 
-The script uses backslashes (\) for multi-line commands, which work in Bash shells. 
-However if you are on Windows CMD, use caret (^) and use backtick (\`) on PowerShell.
+The script uses backslashes (\) for multi-line commands, which work in Bash shells. <br> However if you are on Windows CMD, use caret (^) and use backtick (\`) on PowerShell.
 
 **Required Permissions and Quotas**
 
@@ -171,7 +170,7 @@ az network vnet subnet update \
 
 #### Create a Network Interface (NIC) without associating an NSG
 
-The network security rules are enforced at the subnet level. And therefore the `--network-security-group` parameter is not used.
+The network security rules are enforced at the subnet level. <br> Therefore the `--network-security-group` parameter is not used.
 
 ```bash
 az network nic create \
@@ -319,8 +318,7 @@ az network vnet subnet update \
 
 #### Creating network rules for the firewall
 
-The Azure Firewall operates on a default-deny principle, which means it will block all traffic.
-Therefore traffic from your on-premises network will not be able to reach your VMs through the VPN tunnel unless a specific rule is created to allow it.
+The Azure Firewall operates on a default-deny principle, which means it will block all traffic.<br>Therefore traffic from your on-premises network will not be able to reach your VMs through the VPN tunnel unless a specific rule is created to allow it.
 
 ```bash
 az network firewall network-rule collection create \
@@ -357,7 +355,9 @@ Platform metrics provide real-time performance data. Key metrics include:
 
 **Log Analytics**
 
-You can query detailed logs useful for diagnosing tunnel issues and also tracking security events. Key log insights include:
+You can query detailed logs useful for diagnosing tunnel issues and also tracking security events. 
+
+Key log insights include:
 
   * IKEv2 Security Associations: Status of the Internet Key Exchange protocol.
   * Tunnel Connectivity Events: Events related to the tunnel being connected or disconnected.
